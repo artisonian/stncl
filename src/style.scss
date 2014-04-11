@@ -1,0 +1,55 @@
+$base-color: #f2f2f2;
+$text-color: darken($base-color, 70%);
+$link-color: darken($base-color, 50%);
+$fonts: "Avenir Next", "Helvetica Neue", sans-serif;
+$padding: 2em;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font: 100%/1.5 $fonts;
+  color: $text-color;
+  background-color: $base-color;
+  padding-top: $padding;
+}
+
+a {
+  color: $link-color;
+
+  &:hover {
+    color: darken($base-color, 30%);
+  }
+}
+
+header {
+  text-align: center;
+  border-bottom: 1px solid darken($base-color, 10%);
+  margin-bottom: $padding;
+  padding-bottom: $padding;
+
+  small {
+    color: lighten($text-color, 30%);
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: $padding * 20;
+  padding: $padding/2 $padding;
+  background-color: lighten($base-color, 10%);
+  border: 1px solid darken($base-color, 10%);
+}
+
+footer {
+  font-size: smaller;
+  color: lighten($text-color, 30%);
+}

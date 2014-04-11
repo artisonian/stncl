@@ -1,0 +1,11 @@
+{
+  "plugins": {
+    "metalsmith-sass": {
+      "outputStyle": "compact"
+    },
+    "metalsmith-templates": {
+      "engine": "nunjucks",
+      "inPlace": true
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "stncl",
+  "author": "Leroy Campbell <leroy@artisonian.com>",
+  "version": "0.0.1",
+  "license": "MIT",
+  "dependencies": {
+    "connect": "^2.14.4",
+    "metalsmith": "^0.6.0",
+    "metalsmith-sass": "^0.1.1",
+    "metalsmith-templates": "^0.4.0",
+    "metalsmith-watch": "0.0.3",
+    "nunjucks": "^1.0.4"
+  },
+  "scripts": {
+    "build": "metalsmith",
+    "start": "node index.js"
+  }
+}

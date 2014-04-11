@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Stncl - Mockups with Nunjucks and Sass</title>
+    <link type="text/css" rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        {% block header %}
+        <h1>Stncl</h1>
+        <small>
+          Mockups with
+          <a href="http://jlongster.github.io/nunjucks/">Nunjucks</a> and
+          <a href="http://sass-lang.com">Sass</a>
+        </small>
+        {% endblock %}
+      </header>
+
+      {% block content %}{% endblock %}
+
+      <footer>
+        {% block footer %}
+        <p>Made with <a href="https://github.com/artisoinan/stncl">stncl</a>.</p>
+        {% endblock %}
+      </footer>
+    </div>
+  </body>
+</html>
