@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  font: 100%/1.5 "Avenir Next", "Helvetica Neue", sans-serif;
+  color: #3f3f3f;
+  background-color: #f2f2f2;
+  padding-top: 2em; }
+
+a {
+  color: #727272; }
+  a:hover {
+    color: #a5a5a5; }
+
+header {
+  text-align: center;
+  border-bottom: 1px solid #d8d8d8;
+  margin-bottom: 2em;
+  padding-bottom: 2em; }
+  header small {
+    color: #8c8c8c; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: 1px; }
+
+.container {
+  margin: 0 auto;
+  max-width: 40em;
+  padding: 1em 2em;
+  background-color: white;
+  border: 1px solid #d8d8d8; }
+
+footer {
+  font-size: smaller;
+  color: #8c8c8c; }
