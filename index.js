@@ -1,19 +1,12 @@
 var fs = require('fs');
 var path = require('path');
-
-var connect = require('connect');
+var spawn = require('child_process').spawn;
 
 var Metalsmith = require('metalsmith');
 var templates = require('metalsmith-templates');
 var sass = require('metalsmith-sass');
 
-var port = process.env.PORT || 9000;
-
-var app = connect()
-  .use(connect.logger('dev'))
-  .use(connect.favicon())
-  .use(connect.static(path.join(__dirname, 'build')))
-  .use(connect.directory(path.join(__dirname, 'build')));
+var BROWSER_SYNC_BIN = path.resolve('./node_modules/.bin/browser-sync');
 
 var assets = Metalsmith(__dirname)
   .use(templates({
@@ -25,20 +18,20 @@ var assets = Metalsmith(__dirname)
   }));
 
 assets.build(function (err, res) {
-  app.listen(+port, function () {
-    console.log('Open your browser to http://localhost:' + port + '/');
+  if (err) { console.error(err); }
 
-    fs.watch(path.join(__dirname, 'src'), watch);
-    fs.watch(path.join(__dirname, 'templates'), watch);
+  fs.watch(path.join(__dirname, 'src'), watch);
+  fs.watch(path.join(__dirname, 'templates'), watch);
+
+  spawn(BROWSER_SYNC_BIN, ['start', '--files', 'build/*', '--server', 'build'], {
+    stdio: ['ignore', process.stdout, process.stderr]
   });
 });
 
 function watch (event, filename) {
-  console.log(event + ': ' + filename + '...');
   if (filename) {
     assets.build(function (err, res) {
       if (err) { return console.error(err); }
-      console.log('  ...done');
     });
   }
 }

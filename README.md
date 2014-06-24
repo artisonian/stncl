@@ -13,9 +13,10 @@ To run:
 
     npm start
 
-Any assets added or changed in the `src/` directory will be automatically compiled
-and added to the `build/` directory (which is served by
-[Connect](http://www.senchalabs.org/connect/)).
+Any assets added or changed in the `src/` directory will be automatically compiled,
+added to the `build/` directory, then served by [BrowserSync][bs] for live reloading.
+
+[bs]: http://browsersync.io
 
 **PS**: If you want to trigger a build manually (without using the server),
 simply run:
@@ -24,7 +25,7 @@ simply run:
 
 ## Roadmap
 
-- [LiveReload](https://github.com/shama/tiny-lr) integration
+- Examples and documentation
 
 ## License
 
