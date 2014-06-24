@@ -1,7 +1,7 @@
 {
   "name": "stncl",
   "author": "Leroy Campbell <leroy@artisonian.com>",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "license": "MIT",
   "dependencies": {
     "metalsmith": "^0.8.0",
