@@ -4,7 +4,6 @@
   "version": "0.0.1",
   "license": "MIT",
   "dependencies": {
-    "connect": "^2.14.4",
     "metalsmith": "^0.6.0",
     "metalsmith-sass": "^0.1.1",
     "metalsmith-templates": "^0.4.0",
@@ -13,5 +12,8 @@
   "scripts": {
     "build": "metalsmith",
     "start": "node index.js"
+  },
+  "devDependencies": {
+    "browser-sync": "^1.1.0"
   }
 }
