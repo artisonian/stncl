@@ -1,7 +1,9 @@
-$base-color: #f2f2f2;
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
+
+$base-color: #BDD9EE;
 $text-color: darken($base-color, 70%);
 $link-color: darken($base-color, 50%);
-$fonts: "Avenir Next", "Helvetica Neue", sans-serif;
+$fonts: "Open Sans", "Avenir Next", "Helvetica Neue", sans-serif;
 $padding: 2em;
 
 * {
@@ -11,7 +13,7 @@ $padding: 2em;
 body {
   font: 100%/1.5 $fonts;
   color: $text-color;
-  background-color: $base-color;
+  background-color: lighten($base-color, 14%);
   padding-top: $padding;
 }
 
@@ -25,12 +27,36 @@ a {
 
 header {
   text-align: center;
-  border-bottom: 1px solid darken($base-color, 10%);
   margin-bottom: $padding;
-  padding-bottom: $padding;
+  padding: $padding;
+  background-color: darken($base-color, 30%);
+  border-radius: $padding / 4;
+  font-size: 1.5em;
+
+  h1 {
+    margin: 0;
+    color: lighten($text-color, 30%);
+    font-size: 5em;
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        color: $base-color;
+      }
+    }
+  }
 
   small {
-    color: lighten($text-color, 30%);
+    color: white;
+
+    a {
+      color: $base-color;
+
+      &:hover {
+        color: white;
+      }
+    }
   }
 }
 
@@ -43,13 +69,34 @@ h1, h2, h3, h4, h5, h6 {
 
 .container {
   margin: 0 auto;
-  max-width: $padding * 20;
+  max-width: $padding * 24;
   padding: $padding/2 $padding;
-  background-color: lighten($base-color, 10%);
-  border: 1px solid darken($base-color, 10%);
+}
+
+.pull-left { float: left; }
+.pull-right { float: right; }
+.clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
 }
 
 footer {
+  @extend .clearfix;
   font-size: smaller;
-  color: lighten($text-color, 30%);
+  font-weight: bold;
+
+  .copyright {
+    @extend .pull-right;
+  }
+
+  .colophon {
+    @extend .pull-left;
+  }
 }

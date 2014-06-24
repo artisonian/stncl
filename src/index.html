@@ -1,9 +1,31 @@
+---
+homepage: http://artisonian.github.io/stncl/
+---
+
 {% extends 'templates/layout.html' %}
 
 {% block content %}
 
-<p>
-  Check out the <a href="https://github.com/artisonian/stncl">README</a>,
-  or view an <a href="page.html">example page</a>.
-<p>
+<div>
+  <a href="{{ homepage }}">stncl</a> brings together a rich set of libraries to
+  enable designers to craft beatiful mockups quickly.
+</div>
+
+<div>
+  <h2>Features</h2>
+  <ul class="feature-list">
+    <li>HTML layouts and includes with <a href="http://mozilla.github.io/nunjucks/" title="Nunjucks">Nunjucks</a></li>
+    <li><a href="http://sass-lang.com" title="SASS">SASS</a> support</li>
+    <li>Live reloading with <a href="http://browsersync.io" title="BrowserSync">BrowserSync</a></li>
+  </ul>
+</div>
+
+<div>
+  <h2>Examples</h2>
+  <ul class="example-list">
+    <li><a href="page.html">Templating inheritance</a></li>
+    <li>Custom metadata</li>
+  </ul>
+</div>
+
 {% endblock %}
