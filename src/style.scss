@@ -1,9 +1,8 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
-
 $base-color: #BDD9EE;
 $text-color: darken($base-color, 70%);
 $link-color: darken($base-color, 50%);
-$fonts: "Open Sans", "Avenir Next", "Helvetica Neue", sans-serif;
+$headline-fonts: "Open Sans", Avenir, Helvetica, sans-serif;
+$body-fonts: Merriweather, Georgia, serif;
 $padding: 2em;
 
 * {
@@ -11,10 +10,14 @@ $padding: 2em;
 }
 
 body {
-  font: 100%/1.5 $fonts;
+  font: 100%/1.5 $body-fonts;
   color: $text-color;
   background-color: lighten($base-color, 14%);
   padding-top: $padding;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headline-fonts;
 }
 
 a {
@@ -48,6 +51,7 @@ header {
   }
 
   small {
+    font-family: $headline-fonts;
     color: white;
 
     a {
